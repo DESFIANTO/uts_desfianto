@@ -134,10 +134,8 @@ class _HomeState extends State<Home> {
               margin: EdgeInsets.all(8.0),
               child: InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Perkuliahan()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Perkuliahan()));
                 },
                 splashColor: Colors.grey,
                 child: Center(
