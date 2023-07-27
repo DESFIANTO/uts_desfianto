@@ -5,9 +5,9 @@ class Perpustakaan extends StatelessWidget {
 
   // Buat daftar buku sederhana untuk ditampilkan dalam aplikasi
   final List<Map<String, String>> books = [
-    {'title': 'Judul Buku 1', 'author': 'Pengarang Buku 1'},
-    {'title': 'Judul Buku 2', 'author': 'Pengarang Buku 2'},
-    {'title': 'Judul Buku 3', 'author': 'Pengarang Buku 3'},
+    {'title': 'Instalasi dan Konfigurasi  Linux ', 'author': 'Nugroho Bunafit'},
+    {'title': 'DATABASE RELASIONAL DENGAN MySQL', 'author': 'ANDI'},
+    {'title': 'Databse relasional dengan MySQL', 'author': 'NUGROHO, Bunafit'},
     // Tambahkan judul buku dan pengarang lebih banyak di sini jika diperlukan
   ];
 
@@ -22,18 +22,35 @@ class Perpustakaan extends StatelessWidget {
       body: ListView.builder(
         itemCount: books.length,
         itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(books[index]['title']!),
-            subtitle: Text(books[index]['author']!),
-            onTap: () {
-              // Navigasi ke halaman BookDetailScreen ketika buku dipilih
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => BookDetailScreen(book: books[index]),
+          return Padding(
+            padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+            child: Container(
+              padding: EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: ListTile(
+                title: Text(
+                  books[index]['title']!,
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
-              );
-            },
+                subtitle: Text(
+                  'Pengarang: ${books[index]['author']}',
+                  style: TextStyle(fontSize: 16),
+                ),
+                onTap: () {
+                  // Navigasi ke halaman BookDetailScreen ketika buku dipilih
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          BookDetailScreen(book: books[index]),
+                    ),
+                  );
+                },
+              ),
+            ),
           );
         },
       ),
