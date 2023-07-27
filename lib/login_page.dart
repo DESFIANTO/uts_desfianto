@@ -93,9 +93,20 @@ class LoginPage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text(
-                      "Lupa Password?",
-                      style: TextStyle(color: Colors.grey[600]),
+                    GestureDetector(
+                      onTap: () {
+                        // Navigate to the ForgotPasswordPage
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ForgotPasswordPage(),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        "Lupa Password?",
+                        style: TextStyle(color: Colors.grey[600]),
+                      ),
                     ),
                   ],
                 ),
@@ -112,6 +123,20 @@ class LoginPage extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class ForgotPasswordPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Forgot Password"),
+      ),
+      body: Center(
+        child: Text("This is the Forgot Password page."),
       ),
     );
   }
