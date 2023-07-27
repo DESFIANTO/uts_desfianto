@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Akademik extends StatelessWidget {
   const Akademik({super.key});
 
@@ -16,7 +15,7 @@ class Akademik extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const <Widget>[
-            Text("ini adalah Akademik"),
+            Text("ini adalah Akademikcscscs"),
           ],
         ),
       ),
