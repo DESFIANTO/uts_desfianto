@@ -15,7 +15,7 @@ class Akademik extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const <Widget>[
-            Text("ini adalah Akademik"),
+            Text("ini adalah Akademikk"),
           ],
         ),
       ),
