@@ -9,7 +9,7 @@ import 'package:uts_desfianto/perpustakaan.dart';
 import 'package:uts_desfianto/informasi.dart';
 import 'package:uts_desfianto/profil.dart';
 
-// Stateful Widget, di sisi lain, adalah jenis widget yang memiliki status internal yang dapat berubah selama masa hidupnya. 
+// Stateful Widget, di sisi lain, adalah jenis widget yang memiliki status internal yang dapat berubah selama masa hidupnya.
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -57,7 +57,7 @@ class _HomeState extends State<Home> {
             ListTile(
               leading: Icon(Icons.vpn_key),
               title: Text("Ubah Password"),
-               onTap: () {
+              onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => LupaPassword()),
@@ -67,7 +67,7 @@ class _HomeState extends State<Home> {
             ListTile(
               leading: Icon(Icons.exit_to_app),
               title: Text("Keluar"),
-               onTap: () {
+              onTap: () {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => LoginPage()),
@@ -78,7 +78,7 @@ class _HomeState extends State<Home> {
         ),
       ),
 
-      //Listview Card 
+      //Listview Card
       body: Container(
         padding: EdgeInsets.all(40.0),
         child: GridView.count(
@@ -182,10 +182,8 @@ class _HomeState extends State<Home> {
               margin: EdgeInsets.all(8.0),
               child: InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Perpustakaan()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Perpustakaan()));
                 },
                 splashColor: Colors.grey,
                 child: Center(
