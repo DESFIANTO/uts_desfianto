@@ -6,12 +6,20 @@ import 'package:uts_desfianto/Login/my_textfield.dart';
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
 
-//text editing controller
+  //text editing controller
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
 
-//sign user in
-  void signUserIn() {}
+  //sign user in
+  void signUserIn() {
+    String username = usernameController.text;
+    String password = passwordController.text;
+
+    // Add your authentication logic here (e.g., check username and password against a database)
+    // For this example, I'll just print the username and password to the console
+    print("Username: $username");
+    print("Password: $password");
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -97,10 +105,10 @@ class LoginPage extends StatelessWidget {
                 height: 25,
               ),
 
-              //sing in button
+              //sign in button
               MyButton(
-                  //onTap: signUserIn,
-                  )
+                onTap: signUserIn,
+              )
             ],
           ),
         ),
