@@ -12,33 +12,14 @@ class Akademik extends StatelessWidget {
         backgroundColor: Colors.grey[700],
       ),
       backgroundColor: Colors.grey[500],
-      body: ListView.builder(
-        itemCount: mahasiswaList.length,
-        itemBuilder: (context, index) {
-          return Card(
-            child: ListTile(
-              title: Text(mahasiswaList[index].nama),
-              subtitle: Text(mahasiswaList[index].jurusan),
-            ),
-          );
-        },
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const <Widget>[
+            Text("ini adalah Akademik"),
+          ],
+        ),
       ),
     );
   }
-}
-
-class AkademikScreen extends StatelessWidget {
-  final List<Mahasiswa> mahasiswaList = [
-    Mahasiswa(nama: 'John Doe', jurusan: 'Informatika'),
-    Mahasiswa(nama: 'Jane Smith', jurusan: 'Sistem Informasi'),
-    Mahasiswa(nama: 'Michael Johnson', jurusan: 'Teknik Elektro'),
-    Mahasiswa(nama: 'Lisa Brown', jurusan: 'Akuntansi'),
-  ];
-}
-
-class Mahasiswa {
-  final String nama;
-  final String jurusan;
-
-  Mahasiswa({required this.nama, required this.jurusan});
 }
