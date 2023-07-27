@@ -111,7 +111,7 @@ class _HomeState extends State<Home> {
               child: InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Dosen()));
+                      MaterialPageRoute(builder: (context) => Dosen()));
                 },
                 splashColor: Colors.grey,
                 child: Center(
