@@ -22,7 +22,8 @@ class Profil extends StatelessWidget {
           children: <Widget>[
             CircleAvatar(
               radius: 50,
-              backgroundImage: AssetImage('assets/profile_picture.png'),
+              backgroundImage: NetworkImage(
+                  "https://static.republika.co.id/uploads/images/inpicture_slide/018580600-1653098543-628729271f854-kartun-doraemon.jpg"),
             ),
             SizedBox(height: 20),
             Text(
