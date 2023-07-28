@@ -8,6 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:uts_desfianto/halamanutama.dart';
+// ignore: unused_import
 import 'package:uts_desfianto/main.dart';
 
 void main() {
