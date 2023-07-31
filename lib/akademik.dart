@@ -30,25 +30,35 @@ class Akademik extends StatelessWidget {
       body: ListView.builder(
         itemCount: fakultasList.length,
         itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(
-              fakultasList[index]['nama']!,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-            subtitle: Text(
-              fakultasList[index]['jurusan']!,
-              style: TextStyle(fontSize: 16),
-            ),
-            onTap: () {
-              // Navigasi ke halaman detail fakultas ketika item dipilih
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) =>
-                      DetailFakultas(fakultas: fakultasList[index]),
+          return Padding(
+            padding:
+                const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+            child: Card(
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: ListTile(
+                title: Text(
+                  fakultasList[index]['nama']!,
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
-              );
-            },
+                subtitle: Text(
+                  fakultasList[index]['jurusan']!,
+                  style: TextStyle(fontSize: 16),
+                ),
+                onTap: () {
+                  // Navigasi ke halaman detail fakultas ketika item dipilih
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          DetailFakultas(fakultas: fakultasList[index]),
+                    ),
+                  );
+                },
+              ),
+            ),
           );
         },
       ),

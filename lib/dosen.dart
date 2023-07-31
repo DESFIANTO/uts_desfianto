@@ -5,9 +5,12 @@ class Dosen extends StatelessWidget {
 
   // List of professors and the courses they teach
   final List<Map<String, String>> professors = [
-    {'name': 'Dr. John Doe', 'course': 'Computer Science'},
-    {'name': 'Prof. Jane Smith', 'course': 'Data Science'},
-    {'name': 'Dr. Michael Johnson', 'course': 'Artificial Intelligence'},
+    {'name': 'Billy Montolalu, S.Kom., M.Kom.', 'course': 'Aplikasi Bergerak'},
+    {'name': 'Nanda Iryani, S.T., M.T.', 'course': 'IMK'},
+    {
+      'name': 'Ardiansyah Al Farouq, S.ST., M.T.',
+      'course': 'Artificial Intelligence'
+    },
     // Add more professors and courses here if needed
   ];
 
@@ -25,14 +28,21 @@ class Dosen extends StatelessWidget {
           return Padding(
             padding:
                 const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
-            child: ListTile(
-              title: Text(
-                professors[index]['name']!,
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            child: Card(
+              elevation: 4, // Add elevation to create a shadow effect
+              shape: RoundedRectangleBorder(
+                borderRadius:
+                    BorderRadius.circular(10), // Rounded corners for the card
               ),
-              subtitle: Text(
-                'Mata Kuliah: ${professors[index]['course']}',
-                style: TextStyle(fontSize: 16),
+              child: ListTile(
+                title: Text(
+                  professors[index]['name']!,
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                subtitle: Text(
+                  'Mata Kuliah: ${professors[index]['course']}',
+                  style: TextStyle(fontSize: 16),
+                ),
               ),
             ),
           );

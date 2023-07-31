@@ -4,9 +4,17 @@ class Perkuliahan extends StatelessWidget {
   Perkuliahan({Key? key}) : super(key: key);
 
   final List<Map<String, String>> schedule = [
-    {'day': 'Senin', 'time': '08.00 - 10.00', 'course': 'Matematika'},
-    {'day': 'Selasa', 'time': '10.30 - 12.30', 'course': 'Fisika'},
-    {'day': 'Rabu', 'time': '13.00 - 15.00', 'course': 'Kimia'},
+    {
+      'day': 'Senin',
+      'time': '08.00 - 10.00',
+      'course': 'Metodologi Penelitian'
+    },
+    {'day': 'Selasa', 'time': '10.30 - 12.30', 'course': 'IMK'},
+    {
+      'day': 'Rabu',
+      'time': '13.00 - 15.00',
+      'course': 'Artificial Intelligence'
+    },
     // Tambahkan jadwal perkuliahan lainnya di sini
   ];
 
