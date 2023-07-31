@@ -40,11 +40,13 @@ class LoginPage extends StatelessWidget {
 
               //welcome
               Text(
-                'Selamat Datang!',
+                'Selamat Datang IGracias',
                 style: TextStyle(
                   color: Colors.grey[700],
-                  fontSize: 16,
+                  fontSize: 24, // Perbesar ukuran tulisan
                   height: 10,
+                  fontWeight: FontWeight
+                      .bold, // Pergantian ukuran tulisan menjadi tebal
                 ),
               ),
 
