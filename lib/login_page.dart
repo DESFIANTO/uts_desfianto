@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: unnecessary_import
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:uts_desfianto/Login/my_button.dart';
 import 'package:uts_desfianto/Login/my_textfield.dart';
@@ -33,21 +34,6 @@ class LoginPage extends StatelessWidget {
                 height: 10,
               ),
 
-              //logo
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    'lib/images/iGracias.png',
-                    height: 150,
-                  ),
-                ],
-              ),
-              //Icon(
-              // Icons.lock,
-              //size: 100,
-              // ),
-
               SizedBox(
                 height: 20,
               ),
@@ -58,6 +44,7 @@ class LoginPage extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.grey[700],
                   fontSize: 16,
+                  height: 10,
                 ),
               ),
 
