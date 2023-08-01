@@ -23,7 +23,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        title: Text("MENU UTAMA ITTS"),
+        title: Text("MENU UTAMs ITTS"),
         backgroundColor: Colors.grey[700],
       ),
       backgroundColor: Colors.grey[500],
